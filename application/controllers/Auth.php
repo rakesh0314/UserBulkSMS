@@ -8,7 +8,7 @@ class Auth extends Admin_Controller
 		parent::__construct();
 		$this->load->model('model_auth');
 	}
-
+# My Name Is xyz
 	/* 
 		Check if the login form is submitted, and validates the user credential
 		If not submitted it redirects to the login page
