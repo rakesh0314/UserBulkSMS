@@ -26,7 +26,7 @@ class Enduser extends CI_Controller {
 
      public function check_login()
      {  
-	    $data['loginid']=htmlspecialchars($_POST['loginid']);  
+	    $data['username']=htmlspecialchars($_POST['username']);  
 	    $data['password']=htmlspecialchars($_POST['password']);  
 	    $res=$this->Model_user->islogin($data);  
 	    if($res==true){        
@@ -85,7 +85,7 @@ class Enduser extends CI_Controller {
 	{
 		$this->header();
 		$senderdata['senderdata'] = $this->Model_user->Getsenderdata();
-		//$data['groupdata'] = $this->Model_user->Getgroupdata();
+		$data['groupdata'] = $this->Model_user->Getgroupdata();
 		$this->load->view('User/form',$senderdata);
 		$this->footer();
 		// if($this->input->post('submit')){
@@ -120,9 +120,10 @@ class Enduser extends CI_Controller {
 		$this->header();
 		$this->load->view('User/Whatsappsms');
 		$this->footer();
-	}else{
-		redirect(base_url());
 	}
+		else{
+		    redirect(base_url());
+	        }
 	}
 
 	function show(){
@@ -184,4 +185,13 @@ class Enduser extends CI_Controller {
 		$data=$this->Model_user->sendersave();
 		echo json_encode($data);
 	}
+
+	public function userwallet($id='')
+	{	
+		$this->header();
+		$data = $this->Model_user->userwallet();
+		$this->load->view('User/userwallet');
+		$this->footer();
+	}
+
 }

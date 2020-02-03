@@ -211,10 +211,24 @@ class Users extends Admin_Controller {
 		$this->render_template('users/smsreport', $this->data);
 	}
 
+	public function smsfilter()
+	{
+		$this->render_template('users/smsfilter', $this->data);
+	}
+
+	public function whatsappview()
+	{
+		$this->render_template('users/whatsappview', $this->data);
+	}
+
+	public function sender()
+	{
+		$this->render_template('users/sender' , $this->data);
+	}
+
 	
 
  	 function addPoint($id=''){
-
   		if($this->input->post('smsble')){
 	     	$data = array(		
 	     		   'user_id'=>$this->input->post('userId'),		
@@ -226,17 +240,20 @@ class Users extends Admin_Controller {
 	     }else{
 	     	return false;
 	     }	    
-
- 	}
+ 	 }
 
  	public function userdetails($id)
  	{
  		$data = $this->model_users->userdetails($id);
  		echo json_encode($data);
  	}
+
+ 	
  	public function userinfo(){
  		$data = $this->model_users->userinfo($id);
  		echo json_encode($data);
+ 		
+
  	}
 
 }
