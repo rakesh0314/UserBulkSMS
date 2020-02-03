@@ -27,7 +27,7 @@
               <h3 class="box-title">Manage Users</h3>
             </div>
             <div class="box-body">
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="static" data-keyboard="false">
                Add New Group</button> 
               <table id="userTable" class="table table-bordered table-striped">
                 <thead>
