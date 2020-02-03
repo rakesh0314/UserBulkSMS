@@ -7,8 +7,8 @@ function __construct()
 }    
 	public function islogin($data){
 		$this->db->select('*');
-		$this->db->from('login');
-	    $this->db->where(array('loginid'=>$data['loginid'],'password'=>$data['password']));  
+		$this->db->from('users');
+	    $this->db->where(array('username'=>$data['username'],'password'=>$data['password']));  
 	    $query= $this->db->get();
 	    if($query->num_rows()>0)
 	    {
@@ -26,7 +26,7 @@ function __construct()
     public function getuserID($id)
      {
      	$this->db->select('*');
-		$this->db->from('login');
+		$this->db->from('users');
 	    $this->db->where('id',$id);  
 	    $query= $this->db->get(); 
 	    return $query->row(); 
@@ -34,7 +34,7 @@ function __construct()
      public function displayData($id)
      {
      	$this->db->select('*');
-		$this->db->from('login');
+		$this->db->from('users');
 		$this->db->where('id',$id);
 	    $query= $this->db->get(); 
 	    return $query->row(); 
@@ -95,15 +95,26 @@ function __construct()
    	    $query = $this->db->get();
    		return $query->result_array();
    }
+
     public function Getsenderdata(){
     	$this->db->select('*');
     	$this->db->from('sender');
     	$query = $this->db->get();
     	return $query->result_array();
-    }
+      }
+
     public function viewnumber(){
     	$this->db->select('*');
     	$this->db->from('group_num');
+    	$query = $this->db->get();
+    	return $query->row();
+      }
+
+    public function userwallet($id='')
+    {
+    	$this->db->select('*');
+    	$this->db->from('wallet');
+    	$this->db->where('id',$id);
     	$query = $this->db->get();
     	return $query->row();
     }

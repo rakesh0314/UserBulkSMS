@@ -77,7 +77,6 @@ class Model_users extends CI_Model
  		$this->where('id',$id);
  		$query = $this->db->get();
  		return $query->row_array();
-
  	}
 
  	public function userdetails($id)
