@@ -96,6 +96,10 @@
   <!-- DataTables -->
 <script src="<?php echo base_url('assets/bower_components/datatables.net/js/jquery.dataTables.min.js') ?>"></script>
 <script src="<?php echo base_url('assets/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') ?>"></script>
+<link rel="stylesheet" href="<?= base_url().'assets/user/' ?>css/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="<?= base_url().'assets/user/' ?>css/jquery.timepicker.min.css"/>
+    <script src="<?= base_url().'assets/user/' ?>js/jquery.timepicker.min.js"></script>
+    <script src="<?= base_url().'assets/user/' ?>js/jquery.datetimepicker.js"></script>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">  
