@@ -60,7 +60,7 @@
                   <div class="card-title" style="font-style: italic;"><b>Login to your account</b></div>
                   <div class="form-group">
                     <label class="form-label">LoginId</label>
-                    <input type="text" class="form-control" id="loginid" name="loginid"aria-describedby="emailHelp" placeholder="Enter LoginId">
+                    <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="Enter LoginId">
                   </div>
                   <div class="form-group">
                     <label class="form-label">
