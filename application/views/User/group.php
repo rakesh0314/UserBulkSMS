@@ -21,7 +21,7 @@
                     </div>
               <div class="card-body"> 
               <!-- Button trigger modal -->
-              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter">
+              <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalCenter" data-backdrop="static" data-keyboard="false">
                Add New Group</button>             
               <div class="table-responsive">
               <table class="table table-striped" id="grouplisting">

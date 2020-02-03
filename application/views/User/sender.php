@@ -21,8 +21,8 @@
                     </div>
                     
                     <div class="card-body">
-                      <button type="button" class="btn btn-success" data-toggle="modal" oninput="this.value = this.value.toUpperCase()" data-target="#myModal">Add New Sender ID</button>
-              </div> 
+                      <div>
+                      <button type="button" class="btn btn-success" data-toggle="modal" data-backdrop="static" data-keyboard="false" oninput="this.value = this.value.toUpperCase()" data-target="#myModal">Add New Sender ID</button>
               <div class="table-responsive">    
               <table class="table table-striped" id="senderlisting" >
                 <thead>
@@ -36,7 +36,7 @@
                 <tbody id="Records">
                 <td>    
                 <form name="actionAp" id="actionAp">                                         
-                <select name="actionS" id="actionS" class="form-control" onchange="trideep(this.value,'<?php echo $row['senderIdNum']; ?>');">
+                <select name="actionS" id="actionS" class="form-control">
                  <option value="-1">Select Status</option>
                 <option value="1">Approve</option>
                 <option value="2">Reject</option>
@@ -127,3 +127,5 @@
     $(this).val($(this).val().toUpperCase());     
   });
 </script>
+
+

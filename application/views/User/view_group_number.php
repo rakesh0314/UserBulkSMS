@@ -1,80 +1,40 @@
 
    <div class="my-3 my-md-5">
         <div class="container">
-            <div class="block-header">
                 <div class="row">
-                    <div class="col-lg-5 col-md-8 col-sm-12">
-                        <h2></h2>
-                    </div>            
-                    <div class="col-lg-7 col-md-4 col-sm-12 text-right">
-                    <a href="<?= base_url()?>"><span class="glyphicon glyphicon-home"></span></a>
-                    </div>
-                </div>
-            </div>
-        <form id="gForm" method="post">
-            <div class="row clearfix">
-                <div class="col-12 clearfix">
-                    <div class="card top_report">
-                        <div class="row">
-                         
-                            <div class="col-6">
-                            <div class="body"> 
-                               
-                                    <p>Group Name : <b> <?php echo $groupdata->groupname?></b></p>
-                                  <p>Group ID : <b><?php echo $groupdata->gid?></b></p>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="col-lg-5 col-md-8 col-sm-12">
+                                  <h4 class="card-title">Group Name:</h4>
                                 </div>
-                            </div>
-                            
-                            <div class="col-6">
-                                <div class="body">
-                                    <a href="#addMoreNumber" data-toggle="modal" data-target="#addMoreNumber" class="btn btn-success float-right">Add More Number</a>
+                                <div class="col-lg-7 col-md-4 col-sm-12 text-right">
+                                   <a href="<?= base_url()?>"><span class="glyphicon glyphicon-home"></span></a>
                                 </div>
-                            </div>
-                           
-                                <div class="col-12">
-                                    <div class="body">
-						<div class="table-responsive">
-                            <table class="table table-bordered table-striped table-hover dataTable js-exportable">
-                                                <thead>
-                                                    <tr>
-                                                        <th>Sr. NO</th>
-                                                        <th>Group ID</th>
-                                                        <th>Number</th>
-                                                        <th>Date & Time</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <?php 
-                                                        $i = 1;
-                                                        while($row2 = mysqli_fetch_array($result2))
-                                                        {
-                                                    ?>
-                                                    <tr>
-                                                        <td><?php echo $i++;?></td>
-                                                        <td><?php echo $row2['group_id'];?></td>
-                                                        <td><?php echo $row2['numbers'];?></td>
-                                                        <td><?php echo $row2['dtstamp'];?></td>
-                                                        
-                                                    </tr>
-                                                    <?php 
-                                                        }
-                                                    ?>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        </div>
+                           </div>
+                           <div class="card-body">
+                               <a href="#addMoreNumber" data-toggle="modal" data-target="#addMoreNumber" class="btn btn-success">Add More Number</a>
+                               <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Sr. NO</th>
+                                                <th>Group ID</th>
+                                                <th>Number</th>
+                                                <th>Date & Time</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           
+                                        </tbody>
+                                    </table>
                                 </div>
-                        
-                                
+                           </div>
                         </div>
-                        
-                    </div>
-                    
+                    </div>           
                 </div>
-                          
             </div>
-        </form>
-       </div>
+    </div>
 </div>
 
 
@@ -84,13 +44,13 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="title" id="largeModalLabel">Add More Numbers in (<?php echo $groupdatas->groupname?>) Group</h4>
+                    <h4 class="title" id="largeModalLabel">Add More Numbers in Group</h4>
                 </div>
 
                 <div class="modal-body"> 
                     <label>Numbers</label>
                 <textarea class="form-control" rows="10" name="mobilenum" id="mobilenum" onKeyUp="this.value=commafyPhone(this.value);"></textarea>
-                    <input type="hidden" value="<?php echo $row['Groupid'];?>" id="groupid" name="groupID">
+                <!-- <input type="hidden" value="<?php echo $row['Groupid'];?>" id="groupid" name="groupID"> -->
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" id="broupNumAdd">Update</button>

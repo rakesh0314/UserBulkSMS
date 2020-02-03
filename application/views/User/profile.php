@@ -21,8 +21,8 @@
                       </div>
                       <div class="col-lg-6 col-md-10">
                     <div style="text-align: center;">
-                          <small class="text-muted">LoginId:</small>
-                           <p><?php echo "<td>".$data->loginid."</td>";?></p>
+                          <small class="text-muted">Username:</small>
+                           <p><?php echo "<td>".$data->username."</td>";?></p>
                            <hr>
                         </div>
                       </div>
@@ -38,8 +38,8 @@
                       </div>
                       <div class="col-lg-6 col-md-10">
                     <div style="text-align: center;">
-                          <small class="text-muted">Password:</small>
-                           <p><?php echo "<td>".$data->password."</td>";?></p>
+                          <small class="text-muted">Mobile No:</small>
+                           <p><?php echo "<td>".$data->phone."</td>";?></p>
                            <hr>
                         </div>
                       </div>
@@ -48,14 +48,20 @@
                     <div class="row">
                    <div class="col-lg-6 col-md-10">
                     <div style="text-align: center;">
-                          <small class="text-muted">Mobile No:</small>
-                          <p><?php echo "<td>".$data->mobile."</td>";?></p> 
+                          <small class="text-muted">Adderss:</small>
+                          <p><?php echo "<td>".$data->adderss."</td>";?></p> 
                         </div>
                       </div>
-                      <div class="col-lg-6 col-md-10">
+                      <div class="col-lg-3 col-md-10">
                     <div style="text-align: center;">
-                          <small class="text-muted">Adderss:</small>
-                           <p><?php echo "<td>".$data->address."</td>";?></p>
+                          <small class="text-muted">SMS balance:</small>
+                           <p><?php echo "<td>".$data->smsble."</td>";?></p>
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-10">
+                    <div style="text-align: center;">
+                          <small class="text-muted">Whatsapp balance:</small>
+                           <p><?php echo "<td>".$data->whatsaapble."</td>";?></p>
                         </div>
                       </div>
                     </div>
